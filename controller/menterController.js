@@ -3,9 +3,10 @@ const { parse } = require('json2csv');
 
 module.exports.fetchMenter = async (req, res) => {
   let jsonData = [];
-  var i = 0;
-  while (true) {
-    console.log(i);
+  mentors = true;
+  var item = 0;
+  while (mentors) {
+    console.log(item);
     const payload = {
       specialties: {
         value: [],
@@ -48,7 +49,7 @@ module.exports.fetchMenter = async (req, res) => {
         option: 'must',
       },
       size: 15,
-      offset: i,
+      offset: item,
       sort: {
         field: '_score',
         order: 'desc',
@@ -87,9 +88,9 @@ module.exports.fetchMenter = async (req, res) => {
     if (data.data.results.length <= 0) {
       console.log(data.data.results);
 
-      break;
+      mentors = false;
     }
-    i++;
+    item++;
   }
   const fields = [
     { label: 'Id', value: 'id' },
