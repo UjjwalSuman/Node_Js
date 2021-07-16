@@ -52,7 +52,7 @@ class GrowthMentor {
   };
 };
 
-  const data = await axios.patch('https://app.growthmentor.com/search',
+  const data = await axios.patch('https://app.growthmentor.com/search'),
     payload,
     {
       headers: {
