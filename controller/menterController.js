@@ -1,12 +1,13 @@
 const { parse } = require('json2csv');
+const GrowthMentor = require('../library/growthmentor');
 
 module.exports.fetchMenter = async (req, res) => {
   let jsonData = [];
   mentors = true;
-  var item = 0;
+  var offset = 0;
   while (mentors) {
     console.log(item);
-    data = GrowthMentor.fetchUsers(offset);
+    const data = GrowthMentor.fetchMenter(offset);
 
     jsonData.push(...data.data.results);
 
@@ -15,7 +16,7 @@ module.exports.fetchMenter = async (req, res) => {
 
       mentors = false;
     }
-    item++;
+    offset++;
   }
   const fields = [
     { label: 'Id', value: 'id' },

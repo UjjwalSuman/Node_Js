@@ -44,7 +44,7 @@ class GrowthMentor {
       option: 'must',
     },
     size: 15,
-    offset: item,
+    offset:offset,
     sort: {
       field: '_score',
       order: 'desc',
@@ -79,5 +79,6 @@ class GrowthMentor {
     }
   );
 }
+return(data);
 
 module.exports = GrowthMentor;
