@@ -7,7 +7,7 @@ module.exports.fetchMenter = async (req, res) => {
   var offset = 0;
   while (mentors) {
     console.log(offset);
-    const data = GrowthMentor.fetchMenter(offset),
+    const data = GrowthMentor.fetchMenter(offset);
 
     jsonData.push(...data.data.results);
 
