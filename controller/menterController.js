@@ -3,7 +3,7 @@ const GrowthMentor = require('../library/growthmentor');
 
 module.exports.fetchMenter = async (req, res) => {
   let jsonData = [];
-  mentors = true;
+  let mentors = true;
   var offset = 0;
   while (mentors) {
     console.log(offset);

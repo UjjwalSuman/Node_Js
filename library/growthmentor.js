@@ -2,7 +2,7 @@ const axios = require('axios');
 
 class GrowthMentor {
   async fetchmentor(offset) {
-   cosnt payload = {
+   const payload = {
     specialties: {
       value: [],
       option: 'must',
